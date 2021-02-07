@@ -1,11 +1,14 @@
 #include<stdio.h>
 #include "square.h"
 #include "circle.h"
+#include "test_square.h"
 
 int main(){
 
  int choice;
  float catch, r;
+
+ test_main();
 
     printf("\n enter the below choice to find the area \n");
     printf("\n 1. Square   2. Circle \n");
