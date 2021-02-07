@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include "square.h"
+#include "circle.h"
 
 int main(){
 
@@ -16,7 +18,7 @@ int main(){
 
                 catch = circle(r);
 
-                printf ("\n The area is %f", catch);
+                printf("The area is %f",catch);
                 break;
 
         case 2: printf(" Enter the side of the square");
