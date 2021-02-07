@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "square.h"
 #include "circle.h"
-#include "test_square.h"
+#include "test_area.h"
 
 int main(){
 
