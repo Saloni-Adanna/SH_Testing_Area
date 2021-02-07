@@ -14,7 +14,7 @@ int main(){
         case 1: printf(" Enter the radius of the circle");
                 scanf("%f", &r);
 
-                //catch = circle();
+                catch = circle(r);
 
                 printf ("\n The area is %f", catch);
                 break;
@@ -22,7 +22,7 @@ int main(){
         case 2: printf(" Enter the side of the square");
                 scanf("%f", &r);
 
-                //catch = square(r);
+                catch = square(r);
 
                 printf ("\n The area is %f", catch);
                 break;
