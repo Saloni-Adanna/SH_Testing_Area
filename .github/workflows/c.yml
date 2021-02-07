@@ -1,0 +1,17 @@
+name: C/C++ CI - Build + CodeQuality 
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows 10
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run:  make all -C Implimentation/
