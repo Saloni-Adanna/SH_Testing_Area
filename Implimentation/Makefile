@@ -1,5 +1,5 @@
 SRC =  unity/unity.c \
-		test/test_square.c src/square.c src/circle.c main.c
+		test/test_square.c src/square.c src/circle.c main.c test/test_circle.c
 
 INC = -Iinc\
 -Iunity\
