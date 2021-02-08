@@ -1,9 +1,11 @@
+# Name of the project
+PROJECT_NAME = area 
+
 # Output directory
 BUILD = build
 
-PROJECT_NAME = area
-
-SRC = unity/unity.c\
+# All source code files
+SRC = SRC = unity/unity.c\
 test/test_area.c\
 src/square.c \
 src/circle.c main.c 
@@ -12,23 +14,35 @@ INC = -Iinc\
 -Iunity\
 -Itest
 
-$(PROJECT_NAME):all 
+# Project Output name
+#PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME)
 
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+# Document files
+DOCUMENTATION_OUTPUT = documentation/html
 
-all :$(SRC) $(BUILD)
-	gcc $(SRC) $(INC)-o $(PROJECT_OUTPUT).out
+# Default target built
+$(PROJECT_NAME):all
 
-run :$(PROJECT_NAME)
-		./${PROJECT_NAME}
-		
-doc: make -C documentation
+# Run the target even if the matching name exists
+.PHONY: run clean test doc all
+
+all: $(SRC) $(BUILD)
+	gcc $(SRC) $(INC)-o $(BUILD)/area.out
+
+# Call `make run` to run the application
+run:$(PROJECT_NAME)
+	./$(BUILD)/area.out
+
+# Document the code using Doxygen
+doc:
+	make -C ./documentation
 
 
-clean: rm -rf $(PROJECT_NAME) documentation/html
+# Remove all the built files, invoke by `make clean`
+clean:
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
 
 # Create new build folder if not present
 $(BUILD):
 	mkdir build
-	
 
