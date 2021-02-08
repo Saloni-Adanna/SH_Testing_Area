@@ -1,3 +1,6 @@
+# Output directory
+BUILD = build
+
 SRC = unity/unity.c \
 		test/test_area.c src/square.c src/circle.c main.c 
 
@@ -17,5 +20,9 @@ doc: make -C documentation
 
 
 clean: rm -rf $(PROJECT_NAME) documentation/html
+
+# Create new build folder if not present
+$(BUILD):
+	mkdir build
 	
 
