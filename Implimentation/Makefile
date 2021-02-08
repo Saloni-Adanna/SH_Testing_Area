@@ -26,8 +26,8 @@ $(PROJECT_NAME):all
 # Run the target even if the matching name exists
 .PHONY: run clean test doc all
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC)-o $(BUILD)/area.out
+all: $(PROJECT_NAME): $(SRC)
+	gcc $(SRC) $(INC)-o $(PROJECT_NAME)
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
