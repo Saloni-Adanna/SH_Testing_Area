@@ -27,7 +27,7 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(PROJECT_NAME): $(SRC)
-	gcc $(SRC) $(INC)-o $(PROJECT_NAME)
+	gcc $(SRC) $(INC)-o $(PROJECT_NAME)/area.out
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
