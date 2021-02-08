@@ -15,7 +15,7 @@ INC = -Iinc\
 PROJECT_NAME = area.out
 
 
-$(PROJECT_NAME): $(SRC)
+all  :$(PROJECT_NAME): $(SRC)
 	gcc $(SRC) $(INC) $(TEST) -o $(PROJECT_NAME)
 
 run :$(PROJECT_NAME)
