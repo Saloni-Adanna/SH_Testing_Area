@@ -5,7 +5,7 @@ PROJECT_NAME = area
 BUILD = build
 
 # All source code files
-SRC = SRC = unity/unity.c\
+SRC = unity/unity.c\
 test/test_area.c\
 src/square.c \
 src/circle.c main.c 
