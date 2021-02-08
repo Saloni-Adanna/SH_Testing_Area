@@ -1,17 +1,21 @@
 # Output directory
 BUILD = build
 
-SRC = unity/unity.c \
-		test/test_area.c src/square.c src/circle.c main.c 
+PROJECT_NAME = area
+
+SRC = unity/unity.c\
+test/test_area.c\
+src/square.c \
+src/circle.c main.c 
 
 INC = -Iinc\
 -Iunity\
 -Itest
 
-PROJECT_NAME = area.out
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
 all :$(SRC) $(BUILD)
-	gcc $(SRC) $(INC)-o $(PROJECT_NAME)
+	gcc $(SRC) $(INC)-o $(PROJECT_NAME).out
 
 run :$(PROJECT_NAME)
 		./${PROJECT_NAME}
