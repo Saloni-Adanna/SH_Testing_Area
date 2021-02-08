@@ -12,6 +12,8 @@ INC = -Iinc\
 -Iunity\
 -Itest
 
+$(PROJECT_NAME):all 
+
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
 all :$(SRC) $(BUILD)
