@@ -15,7 +15,7 @@ INC = -Iinc\
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
 all :$(SRC) $(BUILD)
-	gcc $(SRC) $(INC)-o $(PROJECT_NAME).out
+	gcc $(SRC) $(INC)-o $(PROJECT_OUTPUT).out
 
 run :$(PROJECT_NAME)
 		./${PROJECT_NAME}
