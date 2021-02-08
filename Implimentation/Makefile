@@ -1,4 +1,4 @@
-SRC =  unity/unity.c \
+SRC = unity/unity.c \
 		test/test_area.c src/square.c src/circle.c main.c 
 
 INC = -Iinc\
@@ -16,6 +16,6 @@ run :$(PROJECT_NAME)
 doc: make -C documentation
 
 
-clean: 
-	rm -rf $(PROJECT_NAME) documentation/html
+clean: rm -rf $(PROJECT_NAME) documentation/html
+	
 
